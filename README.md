@@ -11,13 +11,13 @@
 ## 产品界面
 
 <p align="center">
-  <img src="docs/assets/home-desktop.png" alt="惠聚生活首页" width="100%">
+  <img src="https://raw.githubusercontent.com/yileon707/consultant/main/docs/assets/home-desktop.png" alt="惠聚生活首页" width="100%">
 </p>
 
 首页采用橙色本地生活视觉，提供餐厅、优惠和预约三个快捷入口；聊天区域支持流式展示 AI 回复。
 
 <p align="center">
-  <img src="docs/assets/chat-recommendation.png" alt="惠聚生活餐厅推荐对话" width="100%">
+  <img src="https://raw.githubusercontent.com/yileon707/consultant/main/docs/assets/chat-recommendation.png" alt="惠聚生活餐厅推荐对话" width="100%">
 </p>
 
 对话场景展示了从用户需求理解到餐厅推荐、进一步筛选和预约引导的完整交互。
@@ -37,7 +37,7 @@
 ## 系统架构
 
 <p align="center">
-  <img src="docs/assets/architecture.svg" alt="惠聚生活系统架构" width="100%">
+  <img src="https://raw.githubusercontent.com/yileon707/consultant/main/docs/assets/architecture.svg" alt="惠聚生活系统架构" width="100%">
 </p>
 
 核心请求链路：
