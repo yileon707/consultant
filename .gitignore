@@ -1,0 +1,30 @@
+# Build output
+target/
+
+# IDE and local workspace files
+.idea/
+*.iml
+.vscode/
+
+# Local configuration and secrets
+.env
+.env.*
+*.local
+*.log
+*.out
+*.pid
+*.p12
+*.jks
+*.pem
+*.key
+
+# Local database exports may contain phone numbers and user records
+**/*.sql
+
+# Large reference documents are kept local and are not required to run the app
+docs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
