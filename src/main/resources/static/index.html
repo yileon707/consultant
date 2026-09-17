@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f5f2eb">
-    <title>雅鉴生活志 · AI 顾问</title>
+    <title>惠聚生活 · AI 顾问</title>
     <link rel="stylesheet" href="/app.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2.31/dist/vue.global.min.js"></script>
 </head>
@@ -14,9 +14,9 @@
     <aside class="app-sidebar" aria-label="主导航">
         <div class="sidebar-content">
             <div class="brand-lockup">
-                <div class="brand-mark" aria-hidden="true">雅</div>
+                <div class="brand-mark" aria-hidden="true">惠</div>
                 <div>
-                    <div class="brand-name">雅鉴生活志</div>
+                    <div class="brand-name">惠聚生活</div>
                     <div class="brand-caption">生活方式顾问</div>
                 </div>
             </div>
@@ -61,13 +61,13 @@
     <main class="conversation-shell">
         <header class="topbar">
             <div class="mobile-brand">
-                <div class="brand-mark small" aria-hidden="true">雅</div>
-                <span>雅鉴生活志</span>
+                <div class="brand-mark small" aria-hidden="true">惠</div>
+                <span>惠聚生活</span>
             </div>
             <div class="topbar-context">
                 <span class="context-kicker">附近好生活</span>
                 <span class="context-divider"></span>
-                <span class="context-name">吃喝玩乐，先问雅鉴</span>
+                <span class="context-name">吃喝玩乐，先问惠聚</span>
             </div>
             <div class="topbar-actions">
                 <button class="icon-button" type="button" @click="startNewConversation" aria-label="新建对话" title="新建对话">
@@ -84,8 +84,8 @@
         <section class="conversation-stage" ref="chatContainer" aria-live="polite">
             <div class="conversation-inner">
                 <div v-if="messages.length === 1 && !isLoading" class="welcome-panel">
-                    <div class="welcome-eyebrow"><span></span> 雅鉴生活志 AI 顾问</div>
-                    <h1>吃喝玩乐，<em>先问雅鉴。</em></h1>
+                    <div class="welcome-eyebrow"><span></span> 惠聚生活 AI 顾问</div>
+                    <h1>吃喝玩乐，<em>先问惠聚。</em></h1>
                     <p class="welcome-copy">餐厅怎么选、优惠券怎么用、预约如何安排？把需求告诉我，帮你更快找到合适的本地生活选择。</p>
 
                     <div class="suggestion-grid" aria-label="快捷提问">
@@ -109,11 +109,11 @@
 
                 <div v-for="(message, index) in messages" :key="index" :class="['message-row', message.role]">
                     <div v-if="message.role !== 'user'" class="assistant-avatar" aria-hidden="true">
-                        <span>雅</span>
+                        <span>惠</span>
                     </div>
                     <div class="message-stack">
                         <div class="message-meta">
-                            <span>{{ message.role === 'user' ? '你' : '雅鉴顾问' }}</span>
+                            <span>{{ message.role === 'user' ? '你' : '惠聚顾问' }}</span>
                             <span v-if="message.role !== 'user'" class="meta-badge">AI</span>
                         </div>
                         <div :class="['message-bubble', { 'is-loading': message.isLoading }]">
@@ -145,7 +145,7 @@
                             @keydown.enter.exact.prevent="sendMessage"
                             @keydown.ctrl.enter.exact.prevent="sendMessage"
                             @keydown.esc.exact="stopResponse"
-                            placeholder="问问今天的雅鉴顾问…"
+                            placeholder="问问今天的惠聚顾问…"
                             rows="1"
                             ref="textarea"
                             aria-label="输入你的问题"
@@ -162,7 +162,7 @@
                         <svg v-else viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/></svg>
                     </button>
                 </div>
-                <p class="composer-disclaimer">雅鉴顾问会结合当前可用的商家与优惠信息回答，重要信息请以实际情况为准。</p>
+                <p class="composer-disclaimer">惠聚顾问会结合当前可用的商家与优惠信息回答，重要信息请以实际情况为准。</p>
             </div>
         </footer>
     </main>
@@ -215,7 +215,7 @@
                 memoeryId.value = Date.now().toString();
                 messages.value.push({
                     role: 'assistant',
-                    content: '你好！我是雅鉴生活志的 AI 顾问，请问今天想从哪里开始？',
+                    content: '你好！我是惠聚生活的 AI 顾问，请问今天想从哪里开始？',
                     isLoading: false,
                     visibleChars: 0,
                     isStreaming: false
@@ -353,7 +353,7 @@
                 darkMode.value = savedDarkMode === 'true';
                 messages.value.push({
                     role: 'assistant',
-                    content: '你好！我是雅鉴生活志的 AI 顾问，请问今天想从哪里开始？',
+                    content: '你好！我是惠聚生活的 AI 顾问，请问今天想从哪里开始？',
                     isLoading: false,
                     visibleChars: 0,
                     isStreaming: false

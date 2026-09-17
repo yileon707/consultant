@@ -22,7 +22,7 @@ target/
 **/*.sql
 
 # Large reference documents are kept local and are not required to run the app
-docs/
+docs/*.pdf
 
 # OS files
 .DS_Store
