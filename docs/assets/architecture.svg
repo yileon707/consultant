@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
   <title id="title">惠聚生活系统架构</title>
-  <desc id="desc">浏览器、Spring Boot、LangChain4j、阿里云百炼、RAG、MySQL 和 Redis 的系统关系图</desc>
+  <desc id="desc">浏览器、Spring Boot、LangChain4j、阿里云百炼、RAG、MySQL、Redis 和业务工具的系统关系图</desc>
   <defs>
     <linearGradient id="hero" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#fff9f0"/>
@@ -16,75 +16,77 @@
       .title { font: 700 36px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #202020; }
       .subtitle { font: 400 18px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #777; }
       .node-title { font: 700 22px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #242424; }
-      .node-text { font: 400 16px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #777; }
+      .node-text { font: 400 15px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #777; }
       .tag { font: 700 15px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #ff7900; }
+      .on-dark { fill: #fff; }
       .connector { stroke: #ff7900; stroke-width: 4; fill: none; marker-end: url(#arrow); }
       .secondary { stroke: #e2b98e; stroke-width: 3; stroke-dasharray: 8 8; fill: none; marker-end: url(#arrow); }
     </style>
   </defs>
-  <rect width="1600" height="820" rx="28" fill="#fbfbfa"/>
-  <rect x="36" y="32" width="1528" height="756" rx="24" fill="url(#hero)"/>
+
+  <rect width="1600" height="720" rx="28" fill="#fbfbfa"/>
+  <rect x="36" y="32" width="1528" height="656" rx="24" fill="url(#hero)"/>
   <text x="88" y="102" class="title">惠聚生活 · AI 本地生活顾问</text>
   <text x="88" y="140" class="subtitle">从用户问题到商家数据、优惠券和预约服务的完整请求链路</text>
 
   <g filter="url(#shadow)">
-    <rect x="90" y="260" width="250" height="150" rx="22" fill="#fff" stroke="#ffd7ad" stroke-width="2"/>
-    <circle cx="145" cy="322" r="28" fill="#ff7900"/>
-    <text x="145" y="331" text-anchor="middle" class="node-title" fill="#fff">惠</text>
-    <text x="190" y="315" class="node-title">浏览器</text>
-    <text x="190" y="346" class="node-text">Vue · 响应式聊天界面</text>
-    <text x="190" y="372" class="node-text">流式展示 AI 回复</text>
+    <rect x="90" y="240" width="250" height="150" rx="22" fill="#fff" stroke="#ffd7ad" stroke-width="2"/>
+    <circle cx="145" cy="302" r="28" fill="#ff7900"/>
+    <text x="145" y="311" text-anchor="middle" class="node-title on-dark">惠</text>
+    <text x="190" y="295" class="node-title">浏览器</text>
+    <text x="190" y="326" class="node-text">Vue · 响应式界面</text>
+    <text x="190" y="352" class="node-text">流式展示 AI 回复</text>
   </g>
 
   <g filter="url(#shadow)">
-    <rect x="430" y="236" width="300" height="198" rx="22" fill="#fff" stroke="#ffc47d" stroke-width="3"/>
-    <text x="470" y="290" class="tag">WEB SERVICE</text>
-    <text x="470" y="333" class="node-title">Spring Boot</text>
-    <text x="470" y="365" class="node-text">ChatController · SSE/Flux</text>
-    <text x="470" y="394" class="node-text">MyBatis-Plus · 业务服务</text>
+    <rect x="430" y="216" width="300" height="198" rx="22" fill="#fff" stroke="#ffc47d" stroke-width="3"/>
+    <text x="470" y="270" class="tag">WEB SERVICE</text>
+    <text x="470" y="313" class="node-title">Spring Boot</text>
+    <text x="470" y="345" class="node-text">ChatController · Flux</text>
+    <text x="470" y="374" class="node-text">MyBatis-Plus · 业务服务</text>
   </g>
 
   <g filter="url(#shadow)">
-    <rect x="820" y="236" width="340" height="198" rx="22" fill="#fff" stroke="#ffc47d" stroke-width="3"/>
-    <text x="860" y="290" class="tag">AI ORCHESTRATION</text>
-    <text x="860" y="333" class="node-title">LangChain4j AiService</text>
-    <text x="860" y="365" class="node-text">工具调用 · RAG 检索</text>
-    <text x="860" y="394" class="node-text">对话记忆 · 流式模型输出</text>
+    <rect x="820" y="216" width="340" height="198" rx="22" fill="#fff" stroke="#ffc47d" stroke-width="3"/>
+    <text x="860" y="270" class="tag">AI ORCHESTRATION</text>
+    <text x="860" y="313" class="node-title">LangChain4j</text>
+    <text x="860" y="342" class="node-title">AiService</text>
+    <text x="860" y="373" class="node-text">工具调用 · RAG 检索</text>
+    <text x="860" y="400" class="node-text">会话记忆 · 流式输出</text>
   </g>
 
   <g filter="url(#shadow)">
-    <rect x="1260" y="236" width="220" height="198" rx="22" fill="#ff7900"/>
-    <text x="1300" y="290" class="tag" fill="#fff">MODEL</text>
-    <text x="1300" y="333" class="node-title" fill="#fff">阿里云百炼</text>
-    <text x="1300" y="365" class="node-text" fill="#fff">Qwen Plus</text>
-    <text x="1300" y="394" class="node-text" fill="#fff">Embedding v3</text>
+    <rect x="1260" y="216" width="220" height="198" rx="22" fill="#ff7900"/>
+    <text x="1300" y="270" class="tag on-dark">MODEL</text>
+    <text x="1300" y="313" class="node-title on-dark">阿里云百炼</text>
+    <text x="1300" y="345" class="node-text on-dark">Qwen Plus</text>
+    <text x="1300" y="374" class="node-text on-dark">Embedding v3</text>
   </g>
 
-  <path d="M340 335h90" class="connector"/>
-  <path d="M730 335h90" class="connector"/>
-  <path d="M1160 335h100" class="connector"/>
+  <path d="M340 315h90" class="connector"/>
+  <path d="M730 315h90" class="connector"/>
+  <path d="M1160 315h100" class="connector"/>
 
   <g filter="url(#shadow)">
-    <rect x="455" y="560" width="290" height="142" rx="22" fill="#fff" stroke="#e7d4bc" stroke-width="2"/>
-    <text x="500" y="612" class="node-title">MySQL</text>
-    <text x="500" y="644" class="node-text">商家 · 优惠券 · 预约</text>
-    <text x="500" y="671" class="node-text">结构化业务数据</text>
+    <rect x="455" y="500" width="290" height="142" rx="22" fill="#fff" stroke="#e7d4bc" stroke-width="2"/>
+    <text x="500" y="552" class="node-title">MySQL</text>
+    <text x="500" y="584" class="node-text">商家 · 优惠券 · 预约</text>
+    <text x="500" y="611" class="node-text">结构化业务数据</text>
   </g>
   <g filter="url(#shadow)">
-    <rect x="865" y="560" width="290" height="142" rx="22" fill="#fff" stroke="#e7d4bc" stroke-width="2"/>
-    <text x="910" y="612" class="node-title">Redis</text>
-    <text x="910" y="644" class="node-text">ChatMemoryStore</text>
-    <text x="910" y="671" class="node-text">多轮对话上下文</text>
+    <rect x="865" y="500" width="290" height="142" rx="22" fill="#fff" stroke="#e7d4bc" stroke-width="2"/>
+    <text x="910" y="552" class="node-title">Redis</text>
+    <text x="910" y="584" class="node-text">ChatMemoryStore</text>
+    <text x="910" y="611" class="node-text">多轮对话上下文</text>
   </g>
   <g filter="url(#shadow)">
-    <rect x="1255" y="560" width="225" height="142" rx="22" fill="#fff" stroke="#e7d4bc" stroke-width="2"/>
-    <text x="1295" y="612" class="node-title">业务 Tools</text>
-    <text x="1295" y="644" class="node-text">Shop · Voucher</text>
-    <text x="1295" y="671" class="node-text">Reservation</text>
+    <rect x="1255" y="500" width="225" height="142" rx="22" fill="#fff" stroke="#e7d4bc" stroke-width="2"/>
+    <text x="1295" y="552" class="node-title">业务 Tools</text>
+    <text x="1295" y="584" class="node-text">Shop · Voucher</text>
+    <text x="1295" y="611" class="node-text">Reservation</text>
   </g>
 
-  <path d="M580 434v86h20v40" class="secondary"/>
-  <path d="M980 434v126" class="secondary"/>
-  <path d="M1090 434v70h275v56" class="secondary"/>
-  <text x="88" y="744" class="subtitle">安全配置通过环境变量注入 · 本地用户数据与 SQL 导出不进入作品集仓库</text>
+  <path d="M580 414v56h20v30" class="secondary"/>
+  <path d="M980 414v86" class="secondary"/>
+  <path d="M1090 414v50h275v36" class="secondary"/>
 </svg>
